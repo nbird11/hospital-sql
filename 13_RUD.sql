@@ -166,12 +166,20 @@ AND    stock_quantity >= 30;  -- Prevent negative stock
 -- Real-world use: Cleaning up cancelled appointments 
 -- older than X days that have no associated treatments
 -- -----------------------------------------------------
+-- @param cleanup_date: Specific date to clean up before (e.g. '2024-03-01')
+-- @param cleanup_days: Number of days back to clean up (e.g. 30)
 DELETE FROM appointment
 WHERE status_id = (SELECT status_id FROM status WHERE status = 'Cancelled')
-AND   datetime < '2024-03-01'  -- Would typically be DATE_SUB(NOW(), INTERVAL 30 DAY)
-AND   appointment_id NOT IN (
+AND (
+  -- Use specific date if provided, otherwise use days back
+  CASE 
+    WHEN @cleanup_date IS NOT NULL THEN datetime < @cleanup_date
+    ELSE datetime < DATE_SUB(CURRENT_DATE(), INTERVAL @cleanup_days DAY)
+  END
+)
+AND appointment_id NOT IN (
   SELECT a.appointment_id 
-  FROM (SELECT * FROM appointment) a  -- Derived table to avoid delete error
+  FROM (SELECT * FROM appointment) a
   JOIN treatment t ON a.patient_id = t.patient_id 
   WHERE DATE(a.datetime) = t.date
 );
