@@ -116,4 +116,25 @@ footer {
     border-top: 1px solid #ddd;
     text-align: center;
     color: #666;
+}
+
+/* Form Dashboard layout */
+.form-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.form-dashboard form {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 0;  /* Override previous form margin */
+}
+
+.form-dashboard h3 {
+    margin-top: 0;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #3498db;
 } 

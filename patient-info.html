@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <title>Patient Information - Hospital Management System</title>
   <meta name="description" content="Access patient information and records">
   <meta name="author" content="Nathan Bird (nathanbirdka@gmail.com)">
@@ -26,7 +27,7 @@
   <main>
     <h2>Patient Information</h2>
 
-    <section>
+    <section class="form-dashboard">
       <!-- Patient History Form -->
       <form id="patientHistoryForm">
         <h3>Patient Treatment History</h3>
@@ -39,12 +40,6 @@
         <button type="submit">View History</button>
       </form>
 
-      <!-- Unpaid Bills Form -->
-      <form id="unpaidBillsForm">
-        <h3>Unpaid Bills Report</h3>
-        <button type="submit">Generate Report</button>
-      </form>
-
       <!-- Doctor's Appointments Form -->
       <form id="doctorScheduleForm">
         <h3>Doctor's Upcoming Appointments</h3>
@@ -55,6 +50,12 @@
         <input type="text" id="doctorLastName" name="doctorLastName" placeholder="Chen">
 
         <button type="submit">View Schedule</button>
+      </form>
+
+      <!-- Unpaid Bills Form -->
+      <form id="unpaidBillsForm">
+        <h3>Unpaid Bills Report</h3>
+        <button type="submit">Generate Report</button>
       </form>
     </section>
   </main>
