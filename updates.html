@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Updates - Hospital Management System</title>
+  <meta name="description" content="Update hospital records and information">
+  <meta name="author" content="Nathan Bird (nathanbirdka@gmail.com)">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Hospital Management System</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="patient-info.html">Patient Information</a></li>
+        <li><a href="updates.html">Updates</a></li>
+        <li><a href="maintenance.html">System Maintenance</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Updates</h2>
+
+    <section>
+      <!-- Update Appointment Status -->
+      <form id="updateAppointmentForm">
+        <h3>Update Appointment Status</h3>
+        <label for="patientEmail">Patient Email:</label>
+        <input type="email" id="patientEmail" name="patientEmail" placeholder="john.smith@email.com">
+
+        <label for="appointmentDate">Appointment Date:</label>
+        <input type="datetime-local" id="appointmentDate" name="appointmentDate">
+
+        <label for="status">New Status:</label>
+        <select id="status" name="status">
+          <option value="completed">Completed</option>
+          <option value="cancelled">Cancelled</option>
+          <option value="no-show">No Show</option>
+        </select>
+
+        <button type="submit">Update Status</button>
+      </form>
+
+      <!-- Update Bill Payment -->
+      <form id="updateBillForm">
+        <h3>Record Bill Payment</h3>
+        <label for="billPatientEmail">Patient Email:</label>
+        <input type="email" id="billPatientEmail" name="billPatientEmail" placeholder="dmiller@email.com">
+
+        <label for="diagnosis">Treatment Diagnosis:</label>
+        <input type="text" id="diagnosis" name="diagnosis" placeholder="Knee Osteoarthritis">
+
+        <label for="paymentAmount">Payment Amount:</label>
+        <input type="number" id="paymentAmount" name="paymentAmount" step="0.01" placeholder="150.00">
+
+        <button type="submit">Record Payment</button>
+      </form>
+
+      <!-- Update Medication Stock -->
+      <form id="updateMedicationForm">
+        <h3>Update Medication Stock</h3>
+        <label for="medicationName">Medication Name:</label>
+        <input type="text" id="medicationName" name="medicationName" placeholder="Lisinopril">
+
+        <label for="quantity">Quantity Change:</label>
+        <input type="number" id="quantity" name="quantity" placeholder="30">
+
+        <select id="stockAction" name="stockAction">
+          <option value="decrease">Decrease Stock</option>
+          <option value="increase">Increase Stock</option>
+        </select>
+
+        <button type="submit">Update Stock</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Hospital Management System</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html> 

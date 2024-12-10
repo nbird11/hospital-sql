@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Information - Hospital Management System</title>
+  <meta name="description" content="Access patient information and records">
+  <meta name="author" content="Nathan Bird (nathanbirdka@gmail.com)">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Hospital Management System</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="patient-info.html">Patient Information</a></li>
+        <li><a href="updates.html">Updates</a></li>
+        <li><a href="maintenance.html">System Maintenance</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Patient Information</h2>
+
+    <section>
+      <!-- Patient History Form -->
+      <form id="patientHistoryForm">
+        <h3>Patient Treatment History</h3>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" placeholder="Daniel">
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Miller">
+
+        <button type="submit">View History</button>
+      </form>
+
+      <!-- Unpaid Bills Form -->
+      <form id="unpaidBillsForm">
+        <h3>Unpaid Bills Report</h3>
+        <button type="submit">Generate Report</button>
+      </form>
+
+      <!-- Doctor's Appointments Form -->
+      <form id="doctorScheduleForm">
+        <h3>Doctor's Upcoming Appointments</h3>
+        <label for="doctorFirstName">Doctor First Name:</label>
+        <input type="text" id="doctorFirstName" name="doctorFirstName" placeholder="Sarah">
+
+        <label for="doctorLastName">Doctor Last Name:</label>
+        <input type="text" id="doctorLastName" name="doctorLastName" placeholder="Chen">
+
+        <button type="submit">View Schedule</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Hospital Management System</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html> 

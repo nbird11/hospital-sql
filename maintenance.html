@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Maintenance - Hospital Management System</title>
+  <meta name="description" content="System maintenance and cleanup operations">
+  <meta name="author" content="Nathan Bird (nathanbirdka@gmail.com)">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Hospital Management System</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="patient-info.html">Patient Information</a></li>
+        <li><a href="updates.html">Updates</a></li>
+        <li><a href="maintenance.html">System Maintenance</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>System Maintenance</h2>
+
+    <section>
+      <!-- Delete Cancelled Appointments -->
+      <form id="deleteCancelledForm">
+        <h3>Clean Up Cancelled Appointments</h3>
+        <label for="beforeDate">Delete Cancelled Before:</label>
+        <input type="date" id="beforeDate" name="beforeDate">
+
+        <button type="submit">Clean Up</button>
+      </form>
+
+      <!-- Delete Expired Room Assignments -->
+      <form id="deleteRoomAssignmentsForm">
+        <h3>Clean Up Room Assignment History</h3>
+        <label for="beforeDateRooms">Delete Assignments Before:</label>
+        <input type="date" id="beforeDateRooms" name="beforeDateRooms">
+
+        <button type="submit">Clean Up</button>
+      </form>
+
+      <!-- Delete Unused Medications -->
+      <form id="deleteUnusedMedsForm">
+        <h3>Remove Unused Medications</h3>
+        <button type="submit">Clean Up Unused Medications</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Hospital Management System</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html> 
