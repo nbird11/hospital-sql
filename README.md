@@ -1,5 +1,7 @@
 # Hospital Management System
 
+<img src="ERD.png" alt="ERD for hospital database" style="width: 777px;" />
+
 ## UI to SQL Query Mapping
 
 This document maps the relationships between User Interface (UI) forms and their corresponding SQL operations in the Hospital Management System.
